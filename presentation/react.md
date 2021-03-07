@@ -14,6 +14,7 @@ steve.huckle@minima.global
 + Why React?
 + Anatomy of a React project
 + A (brief) example
++ A (fast) changing landscape
 + Useful resources
 
 ## Goals
@@ -133,7 +134,7 @@ sum // 118.11
 
 # An Example
 
-![](images/](images/example.svg)
+![](images/example.svg)
 
 _Image Source: [https://freesvg.org/logo-example-fruit-apple](https://freesvg.org/logo-example-fruit-apple)_
 
@@ -142,6 +143,18 @@ _Image Source: [https://freesvg.org/logo-example-fruit-apple](https://freesvg.or
 ## A Simple Something or Other
 
 ...
+
+# A Changing Landscape
+
+![](images/changingLandscape.jpeg)
+
+_Image Source: [https://www.theguardian.com/us-news/2019/aug/06/california-collapsing-beach-deaths-highlight-climate-fueled-erosion-crisis](https://www.theguardian.com/us-news/2019/aug/06/california-collapsing-beach-deaths-highlight-climate-fueled-erosion-crisis)_
+
+- - -
+
+## But..
+
+None of this is set in stone - javascript frameworks are a fast changing landscape...
 
 # Useful Resources
 
