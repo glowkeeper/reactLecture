@@ -82,6 +82,8 @@ _Image Source: [https://medium.com/swlh/how-to-structure-your-typescript-react-r
 
 ## Node.js and NPM
 
+`Node.js` lets developers write Javascript at the server-side. It also provides build environment tools - which is how it is being used here, via `npm`.
+
 + `Node.js` is a JavaScript runtime environment
 + `npm` is a package manager for JavaScript
 + `npm` is the default package manager for `Node.js`
@@ -96,7 +98,7 @@ _Image Source: [https://v4.webpack.js.org/](https://v4.webpack.js.org/)_
 
 + TypeScript extends JavaScript by adding static typing
 + It is a strict syntactical superset of JavaScript
-+ TypeScript transcompiles to JavaScript.
++ TypeScript transcompiles to JavaScript
 + TypeScript helps catch errors _at compile time_
 
 ## Redux
@@ -157,6 +159,14 @@ _Image Source: [https://www.theguardian.com/us-news/2019/aug/06/california-colla
 ## But..
 
 None of this is set in stone - javascript frameworks are a fast changing landscape...
+
+e.g, last year's lecture: `All React components subclass React.Component` - that is no longer true - nowadays, it is more likely you will use _functional components_:
+
+```
+const Welcome = () => {
+  return <h1>Hello world</h1>;
+}
+```
 
 # Useful Resources
 
