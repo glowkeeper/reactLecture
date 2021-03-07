@@ -4,7 +4,7 @@
 
 Dr Steven Huckle - University of Sussex Lecturer and Senior Developer at [Minima Global](https://minima.global/).
 
-Minima’s aim is to create a truly decentralised blockchain network that will operate as an open, co-operative ecosystem, within which users are free to transfer information and value in a secure and trusted environment
+Minima’s aim is to create a truly decentralised blockchain network that will operate as an open, co-operative ecosystem, within which users are free to transfer information and value in a secure and trusted environment.
 
 steve.huckle@minima.global
 
