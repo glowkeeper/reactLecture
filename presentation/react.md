@@ -163,7 +163,7 @@ None of this is set in stone - javascript frameworks are a fast changing landsca
 e.g, last year's lecture: `All React components subclass React.Component` - that is no longer true - nowadays, it is more likely you will use _functional components_:
 
 ```
-const Welcome = () => {
+export const Welcome = () => {
   return <h1>Hello world</h1>;
 }
 ```
