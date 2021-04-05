@@ -4,13 +4,15 @@
 
 Dr Steven Huckle - University of Sussex Lecturer and Senior Developer at [Minima Global](https://minima.global/).
 
-Minima’s aim is to create a truly decentralised blockchain network that will operate as an open, co-operative ecosystem, within which users are free to transfer information and value in a secure and trusted environment.
-
 steve.huckle@minima.global
 
 - - -
 
-## Overview
+## A Quick Aside - Minima
+
+[Minima](https://minima.global/) is working hard to create a truly decentralised blockchain network that will operate as an open, co-operative ecosystem, within which users are free to transfer information (value) in a secure and trusted environment.
+
+## Lecture Overview
 
 + What is React?
 + Why React?
@@ -23,7 +25,8 @@ steve.huckle@minima.global
 
 1. Introduce React
 2. Describe a typical build pipeline of a commercial React project
-3. Show an example
+3. Give a (brief) example of the architecture introduced
+4. _But_ - the overarching aim is to encourage you to build your own projects!
 
 # What is React?
 
@@ -41,6 +44,7 @@ _Image Source: [https://www.freecodecamp.org/news/react-js-for-beginners-props-s
 + JavaScript is a programming language that was originally intended for browsers (client-side)
 + HTML and JavaScript work together to provide a more interactive user experience
 + React is a JavaScript framework designed to take the user (and developer) experience to the next level
++ Common (expected?) to write React using _JSX_ and use [Babel](https://babeljs.io/) to transpile that into native JavaScript that everyone can use
 
 # Why React?
 
@@ -82,7 +86,7 @@ _Image Source: [https://medium.com/swlh/how-to-structure-your-typescript-react-r
 
 ## Node.js and NPM
 
-`Node.js` lets developers write Javascript at the server-side. It also provides build environment tools - which is how it is being used here, via `npm`.
+`Node.js` lets developers write Javascript at the server-side. It also provides build environment tools - which is how it is being used here (via `npm`).
 
 + `Node.js` is a JavaScript runtime environment
 + `npm` is a package manager for JavaScript
@@ -105,8 +109,9 @@ _Image Source: [https://v4.webpack.js.org/](https://v4.webpack.js.org/)_
 
 + Redux is an open-source JavaScript library for managing application state
 + The state of your application is kept in a store
-+ It makes application state dependable and predictable
 + Each (React) component can access any state that it needs from the store
+
++ It makes application state _dependable_ and _predictable_
 + It facilitates communication and sharing of data
 + Helps separate UI from state
 
@@ -115,13 +120,13 @@ _Image Source: [https://v4.webpack.js.org/](https://v4.webpack.js.org/)_
 Redux depends on actions, store, and reducers.
 
 + Actions are events
-+ Actions are sent to the store using `store.dispatch()`
 + They are the only way you can send data from your application to your store
++ Actions are sent to the store using `store.dispatch()`
 
 ### Redux Store
 
 + The store holds the application state
-+ It should be the single source of truth for that state
++ It should be the **single source of truth** for that state
 
 ### Redux Reducers
 
@@ -136,7 +141,7 @@ sum // 118.11
 + Reducers are _pure functions_ that take the current state of an application, perform an action, and return a new state
 + These states are stored as objects; they specify how the state of an application changes in response to an action
 
-# An Example
+# Examples
 
 ![](images/example.svg)
 
@@ -144,9 +149,16 @@ _Image Source: [https://freesvg.org/logo-example-fruit-apple](https://freesvg.or
 
 - - -
 
-## A Simple Something or Other
+## Some Examples via Google
 
-...
++ https://decembersoft.com/posts/starting-a-react-redux-project-with-typescript/
++ https://www.carlrippon.com/creating-react-and-typescript-apps-with-webpack/
++ https://www.freecodecamp.org/news/how-to-use-redux-in-your-react-typescript-app/
++ https://dev.to/jacopobonta/react-typescript-webpack-3c6l
+
+## I Have Plenty of Examples!
+
+https://github.com/glowkeeper
 
 # A Changing Landscape
 
@@ -156,15 +168,43 @@ _Image Source: [https://www.theguardian.com/us-news/2019/aug/06/california-colla
 
 - - -
 
-## But..
+## Wabi-sabi 侘寂
 
-None of this is set in stone - javascript frameworks are a fast changing landscape...
+You must accept transience and imperfection, as none of this is set in stone - javascript frameworks are a fast changing landscape...
 
-e.g, last year's lecture: `All React components subclass React.Component` - that is no longer true - nowadays, it is more likely you will use _functional components_:
+e.g, last year's lecture: `All React components subclass React.Component` - just a year on, that is no longer true! Nowadays, it is more common to see _pure functions_.
+
+## A Trivial
 
 ```
-export const Welcome = () => {
-  return <h1>Hello world</h1>;
+interface WelcomeProps {
+  name: string
+}
+
+export const Welcome = (props: WelcomeProps) => <h1>Hello {props.name}</h1>
+```
+...and you'd use it like this:
+```
+const Intro = () => {
+
+  const welcome = <Welcome name="Dr Huckle"/>
+  return (
+    <>
+      {welcome}
+    </>
+  )
+}
+```
+
+## A Real-life Example
+
+![](images/dexxed.png)
+
+## The Functional Solution
+
+```
+const sortOrderBook = (ordersData: OrderProps): Order[]  => {
+  return ordersData.data?.sort((a: Order, b: Order) => (a.isBuy === b.isBuy) ? (a.isBuy ? b.price.cmp(a.price) : a.price.cmp(b.price)) : 1 )
 }
 ```
 
