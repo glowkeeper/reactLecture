@@ -4,6 +4,7 @@
 
 Dr Steven Huckle - University of Sussex Lecturer and Senior Developer at [Minima Global](https://minima.global/).
 
+s.huckle@sussex.ac.uk
 steve.huckle@minima.global
 
 - - -
@@ -24,7 +25,7 @@ steve.huckle@minima.global
 
 1. Introduce React
 2. Describe a typical build pipeline of a commercial React project
-4. The **overarching** aim is to encourage you to build your own projects!
+4. The **overarching** aim is to encourage you to build your own projects, using React!
 
 # What is React?
 
@@ -36,15 +37,15 @@ _Image Source: [https://www.freecodecamp.org/news/react-js-for-beginners-props-s
 
 ## React
 
-+ React is an open-source, front end, JavaScript framework library for building user interfaces
++ React is an open-source, frontend JavaScript framework library for building user interfaces
 + It is designed to take the user (and developer) experience to the next level
-+ It is maintained by Facebook and a community of developers
++ It is maintained by Facebook _and_ a community of developers
 
 ## React + HTML
 
 + HTML on its own is a declarative markup language used for describing _how_ things look
 + HTML and JavaScript together provide an interactive client-side experience for users
-+ Common (expected?) to write React using _JSX_ and use [Babel](https://babeljs.io/) to transpile that into native JavaScript that everyone can use
++ Common (expected?) to write React using _JSX_ and use [Babel](https://babeljs.io/) to transpile that into native JavaScript that is supported by all browsers
 
 # Why React?
 
@@ -102,8 +103,8 @@ _Image Source: [https://v4.webpack.js.org/](https://v4.webpack.js.org/)_
 
 + TypeScript extends JavaScript by adding static typing
 + It is a strict syntactical superset of JavaScript
-+ TypeScript transpiles to JavaScript
-+ TypeScript helps catch errors _at compile time_, thus avoiding _runtime_ issues.
++ It transpiles to JavaScript
++ TypeScript helps catch errors _at compile time_, thus avoiding _runtime_ issues
 
 ## Redux
 
@@ -115,22 +116,23 @@ _Image Source: [https://v4.webpack.js.org/](https://v4.webpack.js.org/)_
 + It facilitates communication and sharing of data
 + Redux helps separate UI from state
 
-### Redux Actions
+
+### Redux Store
 
 Redux depends on actions, store, and reducers.
+
++ The store holds the application state
++ It should be the **single source of truth** for that state
+
+### Redux Actions
 
 + Actions are events
 + They are the only way you can send data from your application to your store
 + Actions are sent to the store using `store.dispatch()`
 
-### Redux Store
-
-+ The store holds the application state
-+ It should be the **single source of truth** for that state
-
 ### Redux Reducers
 
-Redux reducers are based on the `reduce` function in JavaScript, where a single value is calculated from multiple values, using a callback function:
+Redux reducers are based on the `reduce` function in JavaScript, which is a _pure high-order_ function where a single value is calculated from multiple input parameters:
 
 ```
 const euros = [29.76, 41.85, 46.5];
@@ -138,8 +140,7 @@ const sum = euros.reduce((total, amount) => total + amount);
 sum // 118.11
 ```
 
-+ Reducers are _pure functions_ that take the current state of an application, perform an action, and return a new state
-+ These states are stored as objects; they specify how the state of an application changes in response to an action
++ Redux reducers are _pure functions_ that take the current state of an application, perform an action, and return a new state
 
 # Redux Reducer Example
 
@@ -188,9 +189,9 @@ _Image Source: [https://www.theguardian.com/us-news/2019/aug/06/california-colla
 
 ## Wabi-sabi 侘寂
 
-You must accept transience and imperfection, as none of this is set in stone - javascript frameworks are a fast changing landscape...
+You must accept transience and imperfection, as none of the concepts introduced in this lecture are set in stone - javascript frameworks are a fast changing landscape...
 
-e.g, last year's lecture: `All React components subclass React.Component` - just a year on, that is no longer true! Nowadays, it is more common to see _pure functions_.
+e.g. last year's lecture: `All React components subclass React.Component` - just a year on, that is no longer true! Nowadays, it is more common to see _pure functions_.
 
 ## Hello (World)
 
