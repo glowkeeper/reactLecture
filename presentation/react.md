@@ -10,23 +10,21 @@ steve.huckle@minima.global
 
 ## A Quick Aside - Minima
 
-[Minima](https://minima.global/) is working hard to create a truly decentralised blockchain network that will operate as an open, co-operative ecosystem, within which users are free to transfer information (value) in a secure and trusted environment.
+[Minima](https://minima.global/) is creating a truly decentralised blockchain network that will operate as an open, co-operative ecosystem, within which users are free to transfer information (value) in a secure and trusted environment.
 
 ## Lecture Overview
 
 + What is React?
 + Why React?
 + Anatomy of a React project
-+ A (brief) example
-+ A (fast) changing landscape
++ **Warning** - it is a (fast) changing landscape
 + Useful resources
 
 ## Goals
 
 1. Introduce React
 2. Describe a typical build pipeline of a commercial React project
-3. Give a (brief) example of the architecture introduced
-4. _But_ - the overarching aim is to encourage you to build your own projects!
+4. The **overarching** aim is to encourage you to build your own projects!
 
 # What is React?
 
@@ -38,12 +36,14 @@ _Image Source: [https://www.freecodecamp.org/news/react-js-for-beginners-props-s
 
 ## React
 
-+ React is an open-source, front end, JavaScript library for building user interfaces
++ React is an open-source, front end, JavaScript framework library for building user interfaces
++ It is designed to take the user (and developer) experience to the next level
 + It is maintained by Facebook and a community of developers
+
+## React + HTML
+
 + HTML on its own is a declarative markup language used for describing _how_ things look
-+ JavaScript is a programming language that was originally intended for browsers (client-side)
-+ HTML and JavaScript work together to provide a more interactive user experience
-+ React is a JavaScript framework designed to take the user (and developer) experience to the next level
++ HTML and JavaScript together provide an interactive client-side experience for users
 + Common (expected?) to write React using _JSX_ and use [Babel](https://babeljs.io/) to transpile that into native JavaScript that everyone can use
 
 # Why React?
@@ -86,7 +86,7 @@ _Image Source: [https://medium.com/swlh/how-to-structure-your-typescript-react-r
 
 ## Node.js and NPM
 
-`Node.js` lets developers write Javascript at the server-side. It also provides build environment tools - which is how it is being used here (via `npm`).
+`Node.js` lets developers write server-side Javascript. However, it also provides build environment tools (which is how it is being used above).
 
 + `Node.js` is a JavaScript runtime environment
 + `npm` is a package manager for JavaScript
@@ -102,8 +102,8 @@ _Image Source: [https://v4.webpack.js.org/](https://v4.webpack.js.org/)_
 
 + TypeScript extends JavaScript by adding static typing
 + It is a strict syntactical superset of JavaScript
-+ TypeScript transcompiles to JavaScript
-+ TypeScript helps catch errors _at compile time_
++ TypeScript transpiles to JavaScript
++ TypeScript helps catch errors _at compile time_, thus avoiding _runtime_ issues.
 
 ## Redux
 
@@ -113,7 +113,7 @@ _Image Source: [https://v4.webpack.js.org/](https://v4.webpack.js.org/)_
 
 + It makes application state _dependable_ and _predictable_
 + It facilitates communication and sharing of data
-+ Helps separate UI from state
++ Redux helps separate UI from state
 
 ### Redux Actions
 
@@ -140,6 +140,24 @@ sum // 118.11
 
 + Reducers are _pure functions_ that take the current state of an application, perform an action, and return a new state
 + These states are stored as objects; they specify how the state of an application changes in response to an action
+
+# Redux Reducer Example
+
+```
+const initialState: AllTradesProps = {
+  data: []
+}
+
+export const reducer = (state: AllTradesProps = initialState, action: ActionProps): AllTradesProps => {
+  //console.log('blockchain info: ', action.type, action.payload)
+  if ( action.type == AllTradesActionTypes.ADD_TRADES ) {
+    const tradeData: AllTradesProps = action.payload as AllTradesProps
+    return { ...state, data: tradeData.data }
+  } else {
+    return state
+  }
+}
+```
 
 # Examples
 
@@ -174,7 +192,7 @@ You must accept transience and imperfection, as none of this is set in stone - j
 
 e.g, last year's lecture: `All React components subclass React.Component` - just a year on, that is no longer true! Nowadays, it is more common to see _pure functions_.
 
-## A Trivial
+## Hello (World)
 
 ```
 interface WelcomeProps {
@@ -202,9 +220,12 @@ const Intro = () => {
 
 ## The Functional Solution
 
+Sort is a (super-cool) high-order function that allows developers to define its behaviour via an (anonymous) function, given as an argument.
 ```
 const sortOrderBook = (ordersData: OrderProps): Order[]  => {
-  return ordersData.data?.sort((a: Order, b: Order) => (a.isBuy === b.isBuy) ? (a.isBuy ? b.price.cmp(a.price) : a.price.cmp(b.price)) : 1 )
+  return ordersData.data?.sort((a: Order, b: Order) => {
+    (a.isBuy === b.isBuy) ? (a.isBuy ? b.price.cmp(a.price) : a.price.cmp(b.price)) : 1 )
+  }
 }
 ```
 
@@ -225,3 +246,8 @@ _Image Source: [https://lochside.aberdeen.sch.uk/home-learning-resources/](https
 + [https://webpack.js.org/](https://webpack.js.org/)
 + [https://nodejs.org/en/](https://nodejs.org/en/)
 + [https://www.npmjs.com/](https://www.npmjs.com/)
+
+## Thank-you
+
+s.huckle@sussex.ac.uk
+steve.huckle@minima.global
