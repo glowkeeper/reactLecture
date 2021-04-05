@@ -220,7 +220,7 @@ const Intro = () => {
 
 ## The Functional Solution
 
-Sort is a (super-cool) high-order function that allows developers to define its behaviour via an (anonymous) function, given as an argument.
+Sort is a (super-cool) high-order function that allows developers to define its behaviour via an (anonymous) function, which is given as an argument.
 ```
 const sortOrderBook = (ordersData: OrderProps): Order[]  => {
   return ordersData.data?.sort((a: Order, b: Order) => {
