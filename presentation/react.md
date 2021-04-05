@@ -207,7 +207,7 @@ export const Welcome = (props: WelcomeProps) => <h1>Hello {props.entity}</h1>
 ```
 const Intro = () => {
 
-  const welcome = <Welcome name="World"/>
+  const welcome = <Welcome entity="World"/>
   return (
     <>
       {welcome}
@@ -225,7 +225,7 @@ const Intro = () => {
 Sort is a (super-cool) high-order function that allows developers to define its behaviour via an (anonymous) function, which is given as an argument.
 ```
 const sortOrderBook = (ordersData: OrderProps): Order[]  => {
-  
+
   return ordersData.data?.sort((a: Order, b: Order) => {
     (a.isBuy === b.isBuy) ? (a.isBuy ? b.price.cmp(a.price) : a.price.cmp(b.price)) : 1 )
   }
