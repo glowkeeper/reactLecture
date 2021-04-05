@@ -250,5 +250,7 @@ _Image Source: [https://lochside.aberdeen.sch.uk/home-learning-resources/](https
 
 ## Thank-you
 
+https://github.com/glowkeeper/reactLecture/
+
 s.huckle@sussex.ac.uk
 steve.huckle@minima.global

@@ -1,2 +1,3 @@
-# reactLecture
-University of Sussex React lecture
+# React Lecture
+
+University of Sussex React lecture.
