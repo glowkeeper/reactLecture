@@ -104,7 +104,7 @@ _Image Source: [https://v4.webpack.js.org/](https://v4.webpack.js.org/)_
 + TypeScript extends JavaScript by adding static typing
 + It is a strict syntactical superset of JavaScript
 + It transpiles to JavaScript
-+ TypeScript helps catch errors _at compile time_, thus avoiding _runtime_ issues
++ TypeScript helps catch errors _at compile time_, thus avoiding issues at _runtime_
 
 ## Redux
 
@@ -140,20 +140,21 @@ const sum = euros.reduce((total, amount) => total + amount);
 sum // 118.11
 ```
 
-+ Redux reducers are _pure functions_ that take the current state of an application, perform an action, and return a new state
-
 # Redux Reducer Example
 
++ Redux reducers are _pure functions_ that take the current state of an application, perform an action, and return a new state
 ```
 const initialState: AllTradesProps = {
   data: []
 }
 
 export const reducer = (state: AllTradesProps = initialState, action: ActionProps): AllTradesProps => {
-  //console.log('blockchain info: ', action.type, action.payload)
+
   if ( action.type == AllTradesActionTypes.ADD_TRADES ) {
+
     const tradeData: AllTradesProps = action.payload as AllTradesProps
     return { ...state, data: tradeData.data }
+
   } else {
     return state
   }
@@ -191,22 +192,22 @@ _Image Source: [https://www.theguardian.com/us-news/2019/aug/06/california-colla
 
 You must accept transience and imperfection, as none of the concepts introduced in this lecture are set in stone - javascript frameworks are a fast changing landscape...
 
-e.g. last year's lecture: `All React components subclass React.Component` - just a year on, that is no longer true! Nowadays, it is more common to see _pure functions_.
+e.g. last year's lecture: `All React components subclass React.Component` - just a year on, that is no longer true! Nowadays, it is more common to see a _functional_ approach.
 
 ## Hello (World)
 
 ```
 interface WelcomeProps {
-  name: string
+  entity: string
 }
 
-export const Welcome = (props: WelcomeProps) => <h1>Hello {props.name}</h1>
+export const Welcome = (props: WelcomeProps) => <h1>Hello {props.entity}</h1>
 ```
 ...and you'd use it like this:
 ```
 const Intro = () => {
 
-  const welcome = <Welcome name="Dr Huckle"/>
+  const welcome = <Welcome name="World"/>
   return (
     <>
       {welcome}
@@ -224,6 +225,7 @@ const Intro = () => {
 Sort is a (super-cool) high-order function that allows developers to define its behaviour via an (anonymous) function, which is given as an argument.
 ```
 const sortOrderBook = (ordersData: OrderProps): Order[]  => {
+  
   return ordersData.data?.sort((a: Order, b: Order) => {
     (a.isBuy === b.isBuy) ? (a.isBuy ? b.price.cmp(a.price) : a.price.cmp(b.price)) : 1 )
   }
