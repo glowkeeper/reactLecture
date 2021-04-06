@@ -144,18 +144,19 @@ sum // 118.11
 
 + Redux reducers are _pure functions_ that take the current state of an application, perform an action, and return a new state
 ```
-const initialState: AllTradesProps = {
+const initialState: OrderBookProps = {
   data: []
 }
 
-export const reducer = (state: AllTradesProps = initialState, action: ActionProps): AllTradesProps => {
+export const reducer = (state: OrderBookProps = initialState, action: ActionProps): OrderBookProps => {
 
-  if ( action.type == AllTradesActionTypes.ADD_TRADES ) {
+  if ( action.type == OrderBookActionTypes.ADD_ORDERS ) {  
 
-    const tradeData: AllTradesProps = action.payload as AllTradesProps
-    return { ...state, data: tradeData.data }
+    const orderBookData: OrderBookProps = action.payload as OrderBookProps
+    return { ...state, data: orderBookData.data }
 
   } else {
+
     return state
   }
 }
@@ -197,20 +198,20 @@ e.g. last year's lecture: `All React components subclass React.Component` - just
 ## Hello (World)
 
 ```
-interface WelcomeProps {
+interface HelloProps {
   entity: string
 }
 
-export const Welcome = (props: WelcomeProps) => <h1>Hello {props.entity}</h1>
+export const Hello = (props: HelloProps) => <h1>Hello {props.entity}</h1>
 ```
 ...and you'd use it like this:
 ```
-const Intro = () => {
+const App = () => {
 
-  const welcome = <Welcome entity="World"/>
+  const hello = <Hello entity="World"/>
   return (
     <>
-      {welcome}
+      {hello}
     </>
   )
 }
