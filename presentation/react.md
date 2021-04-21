@@ -1,7 +1,5 @@
 # An Introduction to React
 
-![](images/minimaLogo.svg)
-
 Dr Steve Huckle - University of Sussex Lecturer and Senior Developer at [Minima Global](https://minima.global/).
 
 s.huckle@sussex.ac.uk <br />
@@ -12,6 +10,8 @@ steve.huckle@minima.global
 - - -
 
 ## A Quick Aside - Minima
+
+![](images/minimaLogo.svg)
 
 [Minima](https://minima.global/) is creating a truly decentralised blockchain network that will operate as an open, co-operative ecosystem, within which users are free to transfer information (value) in a secure and trusted environment.
 
