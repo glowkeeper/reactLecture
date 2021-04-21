@@ -1,4 +1,4 @@
-# An Introduction to GitHub
+# An Introduction to React
 
 ![](images/minimaLogo.svg)
 
