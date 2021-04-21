@@ -11,7 +11,7 @@ steve.huckle@minima.global
 
 ## A Quick Aside - Minima
 
-![](images/minimaLogo.svg)
+![](images/minimaLogo.svg)<br />
 [https://minima.global/](https://minima.global/)
 
 [Minima](https://minima.global/) is creating a truly decentralised blockchain network that will operate as an open, co-operative ecosystem, within which users are free to transfer information (value) in a secure and trusted environment.
