@@ -6,7 +6,7 @@ Dr Steven Huckle - University of Sussex Lecturer and Senior Developer at [Minima
 
 s.huckle@sussex.ac.uk <br />
 steve.huckle@minima.global<br />
-[Minima](https://minima.global/)
+[https://minima.global/](https://minima.global/)
 
 - - -
 
@@ -258,5 +258,5 @@ https://github.com/glowkeeper/reactLecture/
 
 s.huckle@sussex.ac.uk <br />
 steve.huckle@minima.global<br />
-[Minima](https://minima.global/)
-[Minima - Get Involved](https://minima.global/get-involved)
+[https://minima.global/](https://minima.global/)
+[https://minima.global/get-involved](https://minima.global/get-involved)
