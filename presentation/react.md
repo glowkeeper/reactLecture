@@ -4,7 +4,7 @@
 
 Dr Steven Huckle - University of Sussex Lecturer and Senior Developer at [Minima Global](https://minima.global/).
 
-s.huckle@sussex.ac.uk
+s.huckle@sussex.ac.uk <br />
 steve.huckle@minima.global
 
 - - -
