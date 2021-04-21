@@ -5,13 +5,13 @@ Dr Steve Huckle - University of Sussex Lecturer and Senior Developer at [Minima 
 s.huckle@sussex.ac.uk <br />
 steve.huckle@minima.global
 
-[https://minima.global/](https://minima.global/)
+
 
 - - -
 
 ## A Quick Aside - Minima
 
-![](images/minimaLogo.svg)
+![](images/minimaLogo.svg) [https://minima.global/](https://minima.global/)
 
 [Minima](https://minima.global/) is creating a truly decentralised blockchain network that will operate as an open, co-operative ecosystem, within which users are free to transfer information (value) in a secure and trusted environment.
 
