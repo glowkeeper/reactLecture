@@ -5,13 +5,11 @@ Dr Steve Huckle - University of Sussex Lecturer and Senior Developer at [Minima 
 s.huckle@sussex.ac.uk <br />
 steve.huckle@minima.global
 
-
-
 - - -
 
 ## A Quick Aside - Minima
 
-![](images/minimaLogo.svg)<br />
+![](images/minimaLogo.png)<br />
 [https://minima.global/](https://minima.global/)
 
 [Minima](https://minima.global/) is creating a truly decentralised blockchain network that will operate as an open, co-operative ecosystem, within which users are free to transfer information (value) in a secure and trusted environment.
@@ -52,7 +50,7 @@ _Image Source: [https://www.freecodecamp.org/news/react-js-for-beginners-props-s
 
 # Why React?
 
-![](images/question.svg)
+![](images/question.png)
 
 _Image Source: [https://freesvg.org/black-question-mark-sign-vector-image](https://freesvg.org/black-question-mark-sign-vector-image)_
 
@@ -143,7 +141,7 @@ const sum = euros.reduce((total, amount) => total + amount);
 sum // 118.11
 ```
 
-# Redux Reducer Example
+### Redux Reducer Example
 
 + Redux reducers are _pure functions_ that take the current state of an application, perform an action, and return a new state
 ```
@@ -165,13 +163,11 @@ export const reducer = (state: OrderBookProps = initialState, action: ActionProp
 }
 ```
 
-# Examples
+## Material UI
 
-![](images/example.svg)
-
-_Image Source: [https://freesvg.org/logo-example-fruit-apple](https://freesvg.org/logo-example-fruit-apple)_
-
-- - -
++ [Material](https://material.io/design) is a design system created by Google, which helps developers create high-quality digital experiences
++ [Material UI](https://material-ui.com/) is a component library for React that uses Google's Material to create responsive grid-based layouts
++ Fast and familiar
 
 ## Some Examples via Google
 
@@ -183,6 +179,8 @@ _Image Source: [https://freesvg.org/logo-example-fruit-apple](https://freesvg.or
 ## I Have Plenty of Examples!
 
 https://github.com/glowkeeper
+
+...and there is some more example code in the next section...
 
 # A Changing Landscape
 
@@ -211,20 +209,93 @@ export const Hello = (props: HelloProps) => <h1>Hello {props.entity}</h1>
 ```
 const App = () => {
 
-  const hello = <Hello entity="World"/>
   return (
-    <>
-      {hello}
-    </>
+    <Hello entity="World"/>
   )
 }
 ```
 
-## A Real-life Example
+## Hooks
+
+React's functional approach is powered by _hooks_, which are special functions that let developers "hook into" React features without necessitating classes.
+
+### Common Hooks
+
+1. [useState](https://reactjs.org/docs/hooks-state.html) - adds state to function components
+2. [useEffect](https://reactjs.org/docs/hooks-effect.html) - performs side effects in function components
+3. [useRef](https://reactjs.org/docs/hooks-reference.html#useref) - returns a mutable ref object whose `.current` property is initialised to the passed argument
+4. [useHistory](https://reactrouter.com/web/api/Hooks/usehistory) - used for navigation as it gives access to the [react router](https://reactrouter.com/) history instance
+5. [useTheme](https://material-ui.com/styles/api/#usetheme-theme) - returns the [Material UI](https://material-ui.com/) theme object
+
+## Hook Example
+
+```
+const display = (props: Props) => {
+
+  let isFirstRun = useRef(true)
+  const theme = useTheme()
+  const classes = themeStyles()
+  const history = useHistory()
+
+  useEffect(() => {
+
+    if ( !props.user.accessToken ) {
+
+      props.setActivePage(PageTypes.SIGNIN)
+      history.push(`${Local.home}`)
+
+    } else if ( ( props.user.info.role !== Dbase.adminRole.id ) &&
+                ( props.user.info.role !== Dbase.sqlRole.id ) ) {
+
+      props.setActivePage(PageTypes.SIGNIN)
+      history.push(`${Local.signIn}`)
+
+    } else if ( isFirstRun.current ) {
+
+      props.setActivePage(PageTypes.AUTHENTICATED)
+      isFirstRun.current = false
+    }
+
+  }, [props.user])
+
+  return (
+
+    <Grid className={classes.loggedInContent} item container xs={12}>
+
+      <Grid item container xs={12}>
+
+        <Grid item container justify="flex-start" xs={12}>
+
+          <Typography variant="h2">
+            {WalletConfig.heading}
+          </Typography>
+
+        </Grid>
+
+        <Grid item container justify="flex-start" xs={12}>
+          <svg
+             xmlns="http://www.w3.org/2000/svg"
+             width="2000"
+             height="4"
+          >
+            <line x2="2000" stroke="#317AFF" strokeWidth={4} />
+          </svg>
+        </Grid>
+
+        <ListWallets />
+
+      </Grid>
+
+    </Grid>
+  )
+}
+```
+
+## Dexxed
 
 ![](images/dexxed.png)
 
-## The Functional Solution
+### The Functional Solution
 
 Sort is a (super-cool) high-order function that allows developers to define its behaviour via an (anonymous) function, which is given as an argument.
 ```
@@ -253,6 +324,7 @@ _Image Source: [https://lochside.aberdeen.sch.uk/home-learning-resources/](https
 + [https://webpack.js.org/](https://webpack.js.org/)
 + [https://nodejs.org/en/](https://nodejs.org/en/)
 + [https://www.npmjs.com/](https://www.npmjs.com/)
++ [https://material-ui.com/](https://material-ui.com/)
 
 ## Thank-you
 
