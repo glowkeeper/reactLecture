@@ -2,10 +2,11 @@
 
 ![](images/minimaLogo.svg)
 
-Dr Steven Huckle - University of Sussex Lecturer and Senior Developer at [Minima Global](https://minima.global/).
+Dr Steve Huckle - University of Sussex Lecturer and Senior Developer at [Minima Global](https://minima.global/).
 
 s.huckle@sussex.ac.uk <br />
-steve.huckle@minima.global<br />
+steve.huckle@minima.global
+
 [https://minima.global/](https://minima.global/)
 
 - - -
@@ -254,9 +255,10 @@ _Image Source: [https://lochside.aberdeen.sch.uk/home-learning-resources/](https
 
 ## Thank-you
 
-https://github.com/glowkeeper/reactLecture/
+[https://github.com/glowkeeper/reactLecture/](https://github.com/glowkeeper/reactLecture/)
 
 s.huckle@sussex.ac.uk <br />
-steve.huckle@minima.global<br />
-[https://minima.global/](https://minima.global/)
+steve.huckle@minima.global
+
+[https://minima.global/](https://minima.global/)<br />
 [https://minima.global/get-involved](https://minima.global/get-involved)
