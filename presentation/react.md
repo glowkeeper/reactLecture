@@ -2,14 +2,18 @@
 
 Dr Steve Huckle - University of Sussex Lecturer and Senior Developer at [Minima Global](https://minima.global/).
 
-s.huckle@sussex.ac.uk <br />
+s.huckle@sussex.ac.uk
+
 steve.huckle@minima.global
+
+April 2021
 
 - - -
 
 ## A Quick Aside - Minima
 
-![](images/minimaLogo.png)<br />
+![](images/minimaLogo.png)
+
 [https://minima.global/](https://minima.global/)
 
 [Minima](https://minima.global/) is creating a truly decentralised blockchain network that will operate as an open, co-operative ecosystem, within which users are free to transfer information (value) in a secure and trusted environment.
@@ -39,8 +43,8 @@ _Image Source: [https://www.freecodecamp.org/news/react-js-for-beginners-props-s
 ## React
 
 + React is an open-source, frontend JavaScript framework library for building user interfaces
-+ It is designed to take the user (and developer) experience to the next level
-+ It is maintained by Facebook _and_ a community of developers
++ It is designed to create a fantastic user (and developer) experience
++ Facebook, Instagram, Netflix and many other well-known platforms are built using React
 
 ## React + HTML
 
@@ -105,25 +109,21 @@ _Image Source: [https://v4.webpack.js.org/](https://v4.webpack.js.org/)_
 + TypeScript extends JavaScript by adding static typing
 + It is a strict syntactical superset of JavaScript
 + It transpiles to JavaScript
-+ TypeScript helps catch errors _at compile time_, thus avoiding issues at _runtime_
++ TypeScript helps catch errors _at compile time_, thus avoiding issues _at runtime_
 
 ## Redux
 
 + Redux is an open-source JavaScript library for managing application state
-+ The state of your application is kept in a store
-+ Each (React) component can access any state that it needs from the store
-
-+ It makes application state _dependable_ and _predictable_
++ It makes application state dependable and predictable
++ It depends on actions, store, and reducers.
 + It facilitates communication and sharing of data
-+ Redux helps separate UI from state
-
++ Helps separate UI from state
 
 ### Redux Store
 
-Redux depends on actions, store, and reducers.
-
 + The store holds the application state
-+ It should be the **single source of truth** for that state
++ Each (React) component can access any state that it needs from the store
++ The store should be the **single source of truth** for the application
 
 ### Redux Actions
 
@@ -133,7 +133,7 @@ Redux depends on actions, store, and reducers.
 
 ### Redux Reducers
 
-Redux reducers are based on the `reduce` function in JavaScript. Reducers are a functional programming concept - they let you iterate over a list and apply a function to an accumulated value and the next item in the list until the iteration is complete and the accumulated value gets returned:
+Reducers are a functional programming concept - they let you iterate over a list and apply a function to an accumulated value and the next item in the list. When the iteration is complete, the accumulated value gets returned:
 ```
 const euros = [29.76, 41.85, 46.5];
 const sum = euros.reduce((total, amount) => total + amount);
@@ -141,12 +141,12 @@ sum // 118.11
 ```
 A more advanced example:
 ```
-pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);
+const pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);
 ```
 
 ### Redux Reducer Example
 
-+ Redux reducers are _pure functions_ that take the current state of an application, perform an action, and return a new state
+Redux reducers are _pure functions_ that take the current state of an application, perform an action, and return a new state:
 ```
 const initialState: OrderBookProps = {
   data: []
@@ -172,16 +172,16 @@ export const reducer = (state: OrderBookProps = initialState, action: ActionProp
 + [Material UI](https://material-ui.com/) is a component library for React that uses Google's Material to create responsive grid-based layouts
 + Fast and familiar
 
-## Some Examples via Google
+## React+Redux+Typescript+Webpack via Google
 
-+ https://decembersoft.com/posts/starting-a-react-redux-project-with-typescript/
-+ https://www.carlrippon.com/creating-react-and-typescript-apps-with-webpack/
-+ https://www.freecodecamp.org/news/how-to-use-redux-in-your-react-typescript-app/
-+ https://dev.to/jacopobonta/react-typescript-webpack-3c6l
++ [https://decembersoft.com/posts/starting-a-react-redux-project-with-typescript/](https://decembersoft.com/posts/starting-a-react-redux-project-with-typescript/)
++ [https://www.carlrippon.com/creating-react-and-typescript-apps-with-webpack/](https://www.carlrippon.com/creating-react-and-typescript-apps-with-webpack/)
++ [https://www.freecodecamp.org/news/how-to-use-redux-in-your-react-typescript-app/](https://www.freecodecamp.org/news/how-to-use-redux-in-your-react-typescript-app/)
++ [https://dev.to/jacopobonta/react-typescript-webpack-3c6l](https://dev.to/jacopobonta/react-typescript-webpack-3c6l)
 
 ## I Have Plenty of Examples!
 
-https://github.com/glowkeeper
+[https://github.com/glowkeeper](https://github.com/glowkeeper)
 
 ...and there is some more example code in the next section...
 
@@ -220,7 +220,7 @@ const App = () => {
 
 ## Hooks
 
-React's functional approach is powered by _hooks_, which are special functions that let developers "hook into" React features without necessitating classes.
+React's functional approach is powered by _hooks_, which are special functions that let developers "hook into" the React lifecycle without requiring class architecture.
 
 ### Common Hooks
 
@@ -294,7 +294,7 @@ const display = (props: Props) => {
 }
 ```
 
-## Dexxed
+## Dexxed – A Minima App
 
 ![](images/dexxed.png)
 
@@ -304,7 +304,7 @@ Sort is a (super-cool) high-order function that allows developers to define its 
 ```
 const sortOrderBook = (ordersData: OrderProps): Order[]  => {
 
-  return ordersData.data?.sort((a: Order, b: Order) => {
+  return ordersData.data.sort((a: Order, b: Order) => {
     (a.isBuy === b.isBuy) ? (a.isBuy ? b.price.cmp(a.price) : a.price.cmp(b.price)) : 1 )
   }
 }
@@ -333,8 +333,10 @@ _Image Source: [https://lochside.aberdeen.sch.uk/home-learning-resources/](https
 
 [https://github.com/glowkeeper/reactLecture/](https://github.com/glowkeeper/reactLecture/)
 
-s.huckle@sussex.ac.uk <br />
+s.huckle@sussex.ac.uk
+
 steve.huckle@minima.global
 
-[https://minima.global/](https://minima.global/)<br />
+[https://minima.global/](https://minima.global/)
+
 [https://minima.global/get-involved](https://minima.global/get-involved)
