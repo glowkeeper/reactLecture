@@ -133,12 +133,15 @@ Redux depends on actions, store, and reducers.
 
 ### Redux Reducers
 
-Redux reducers are based on the `reduce` function in JavaScript, which is a _pure high-order_ function where a single value is calculated from multiple input parameters:
-
+Redux reducers are based on the `reduce` function in JavaScript. Reducers are a functional programming concept - they let you iterate over a list and apply a function to an accumulated value and the next item in the list until the iteration is complete and the accumulated value gets returned:
 ```
 const euros = [29.76, 41.85, 46.5];
 const sum = euros.reduce((total, amount) => total + amount);
 sum // 118.11
+```
+A more advanced example:
+```
+pipe = (...fns) => (x) => fns.reduce((v, f) => f(v), x);
 ```
 
 ### Redux Reducer Example
