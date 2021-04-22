@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>react</title>
+  <style type="text/css">
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      span.underline{text-decoration: underline;}
+      div.column{display: inline-block; vertical-align: top; width: 50%;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div id="an-introduction-to-react" class="slide section level1">
+<h1>An Introduction to React</h1>
+<p>Dr Steve Huckle - University of Sussex Lecturer and Senior Developer at <a href="https://minima.global/">Minima Global</a>.</p>
+<p>s.huckle@sussex.ac.uk</p>
+<p>steve.huckle@minima.global</p>
+<p>April 2021</p>
+</div>
+<div id="a-quick-aside---minima" class="slide section level1">
+<h1>A Quick Aside - Minima</h1>
+<p><img src="images/minimaLogo.png" /></p>
+<p><a href="https://minima.global/">https://minima.global/</a></p>
+<p><a href="https://minima.global/">Minima</a> is creating a truly decentralised blockchain network that will operate as an open, co-operative ecosystem, within which users are free to transfer information (value) in a secure and trusted environment.</p>
+</div>
+<div id="lecture-overview" class="slide section level1">
+<h1>Lecture Overview</h1>
+<ul class="incremental">
+<li>What is React?</li>
+<li>Why React?</li>
+<li>Anatomy of a React project</li>
+<li><strong>Warning</strong> - it is a (fast) changing landscape</li>
+<li>Useful resources</li>
+</ul>
+</div>
+<div id="goals" class="slide section level1">
+<h1>Goals</h1>
+<ol class="incremental" style="list-style-type: decimal">
+<li>Introduce React</li>
+<li>Describe a typical build pipeline of a commercial React project</li>
+<li>The <strong>overarching</strong> aim is to encourage you to build your own projects, using React!</li>
+</ol>
+</div>
+<div id="what-is-react" class="slide section level1">
+<h1>What is React?</h1>
+<p><img src="images/react.png" /></p>
+<p><em>Image Source: <a href="https://www.freecodecamp.org/news/react-js-for-beginners-props-state-explained/">https://www.freecodecamp.org/news/react-js-for-beginners-props-state-explained/</a></em></p>
+</div>
+<div id="react" class="slide section level1">
+<h1>React</h1>
+<ul class="incremental">
+<li>React is an open-source, frontend JavaScript framework library for building user interfaces</li>
+<li>It is designed to create a fantastic user (and developer) experience</li>
+<li>Facebook, Instagram, Netflix and many other well-known platforms are built using React</li>
+</ul>
+</div>
+<div id="react-html" class="slide section level1">
+<h1>React + HTML</h1>
+<ul class="incremental">
+<li>HTML on its own is a declarative markup language used for describing <em>how</em> things look</li>
+<li>HTML and JavaScript together provide an interactive client-side experience for users</li>
+<li>Common (expected?) to write React using <em>JSX</em> and use <a href="https://babeljs.io/">Babel</a> to transpile that into native JavaScript that is supported by all browsers</li>
+</ul>
+</div>
+<div id="why-react" class="slide section level1">
+<h1>Why React?</h1>
+<p><img src="images/question.png" /></p>
+<p><em>Image Source: <a href="https://freesvg.org/black-question-mark-sign-vector-image">https://freesvg.org/black-question-mark-sign-vector-image</a></em></p>
+</div>
+<div id="language-rankings" class="slide section level1">
+<h1>Language Rankings</h1>
+<p><img src="images/languageRankings.png" /></p>
+<p><em>Image Source: <a href="https://octoverse.github.com/">https://octoverse.github.com/</a></em></p>
+</div>
+<div id="download-trends" class="slide section level1">
+<h1>Download Trends</h1>
+<p><img src="images/downloadTrends.png" /></p>
+<p><em>Image Source: <span class="citation">[https://www.npmtrends.com/react-vs-vue-vs-@angular/core]</span>(https://www.npmtrends.com/react-vs-vue-vs-<span class="citation">@angular/core</span>)</em></p>
+</div>
+<div id="jobs" class="slide section level1">
+<h1>Jobs</h1>
+<p><img src="images/hiringTrends.png" /></p>
+<p><em>Image Source: <a href="https://www.hntrends.com/2020/dec-year-unlike-any-other-tech-tools-didnt-change-much.html?compare=React&amp;compare=Vue&amp;compare=Angular+2&amp;compare=AngularJS">https://www.hntrends.com/2020/dec-year-unlike-any-other-tech-tools-didnt-change-much.html?compare=React&amp;compare=Vue&amp;compare=Angular+2&amp;compare=AngularJS</a></em></p>
+</div>
+<div id="anatomy-of-a-react-project" class="slide section level1">
+<h1>Anatomy of a React Project</h1>
+<p><img src="images/reactReduxTypescriptWebpack.png" /></p>
+<p><em>Image Source: <a href="https://medium.com/swlh/how-to-structure-your-typescript-react-redux-app-877d1eba1c1e">https://medium.com/swlh/how-to-structure-your-typescript-react-redux-app-877d1eba1c1e</a></em></p>
+</div>
+<div id="architectural-overview" class="slide section level1">
+<h1>Architectural Overview</h1>
+<p><img src="images/anatomy.png" /></p>
+</div>
+<div id="node.js-and-npm" class="slide section level1">
+<h1>Node.js and NPM</h1>
+<p><code>Node.js</code> lets developers write server-side Javascript. However, it also provides build environment tools (which is how it is being used above).</p>
+<ul class="incremental">
+<li><code>Node.js</code> is a JavaScript runtime environment</li>
+<li><code>npm</code> is a package manager for JavaScript</li>
+<li><code>npm</code> is the default package manager for <code>Node.js</code></li>
+</ul>
+</div>
+<div id="webpack" class="slide section level1">
+<h1>Webpack</h1>
+<p><img src="images/webpack.png" /></p>
+<p><em>Image Source: <a href="https://v4.webpack.js.org/">https://v4.webpack.js.org/</a></em></p>
+</div>
+<div id="typescript" class="slide section level1">
+<h1>Typescript</h1>
+<ul class="incremental">
+<li>TypeScript extends JavaScript by adding static typing</li>
+<li>It is a strict syntactical superset of JavaScript</li>
+<li>It transpiles to JavaScript</li>
+<li>TypeScript helps catch errors <em>at compile time</em>, thus avoiding issues <em>at runtime</em></li>
+</ul>
+</div>
+<div id="redux" class="slide section level1">
+<h1>Redux</h1>
+<ul class="incremental">
+<li>Redux is an open-source JavaScript library for managing application state</li>
+<li>It makes application state dependable and predictable</li>
+<li>It depends on actions, store, and reducers.</li>
+<li>It facilitates communication and sharing of data</li>
+<li>Helps separate UI from state</li>
+</ul>
+</div>
+<div id="redux-store" class="slide section level1">
+<h1>Redux Store</h1>
+<ul class="incremental">
+<li>The store holds the application state</li>
+<li>Each (React) component can access any state that it needs from the store</li>
+<li>The store should be the <strong>single source of truth</strong> for the application</li>
+</ul>
+</div>
+<div id="redux-actions" class="slide section level1">
+<h1>Redux Actions</h1>
+<ul class="incremental">
+<li>Actions are events</li>
+<li>They are the only way you can send data from your application to your store</li>
+<li>Actions are sent to the store using <code>store.dispatch()</code></li>
+</ul>
+</div>
+<div id="redux-reducers" class="slide section level1">
+<h1>Redux Reducers</h1>
+<p>Reducers are a functional programming concept - they let you iterate over a list and apply a function to an accumulated value and the next item in the list. When the iteration is complete, the accumulated value gets returned:</p>
+<pre><code>const euros = [29.76, 41.85, 46.5];
+const sum = euros.reduce((total, amount) =&gt; total + amount);
+sum // 118.11</code></pre>
+<p>A more advanced example:</p>
+<pre><code>const pipe = (...fns) =&gt; (x) =&gt; fns.reduce((v, f) =&gt; f(v), x);</code></pre>
+</div>
+<div id="redux-reducer-example" class="slide section level1">
+<h1>Redux Reducer Example</h1>
+<p>Redux reducers are <em>pure functions</em> that take the current state of an application, perform an action, and return a new state:</p>
+<pre><code>const initialState: OrderBookProps = {
+  data: []
+}
+
+export const reducer = (state: OrderBookProps = initialState, action: ActionProps): OrderBookProps =&gt; {
+
+  if ( action.type == OrderBookActionTypes.ADD_ORDERS ) {  
+
+    const orderBookData: OrderBookProps = action.payload as OrderBookProps
+    return { ...state, data: orderBookData.data }
+
+  } else {
+
+    return state
+  }
+}</code></pre>
+</div>
+<div id="material-ui" class="slide section level1">
+<h1>Material UI</h1>
+<ul class="incremental">
+<li><a href="https://material.io/design">Material</a> is a design system created by Google, which helps developers create high-quality digital experiences</li>
+<li><a href="https://material-ui.com/">Material UI</a> is a component library for React that uses Google’s Material to create responsive grid-based layouts</li>
+<li>Fast and familiar</li>
+</ul>
+</div>
+<div id="reactreduxtypescriptwebpack-via-google" class="slide section level1">
+<h1>React+Redux+Typescript+Webpack via Google</h1>
+<p><a href="https://decembersoft.com/posts/starting-a-react-redux-project-with-typescript/">https://decembersoft.com/posts/starting-a-react-redux-project-with-typescript/</a></p>
+<p><a href="https://www.carlrippon.com/creating-react-and-typescript-apps-with-webpack/">https://www.carlrippon.com/creating-react-and-typescript-apps-with-webpack/</a></p>
+<p><a href="https://www.freecodecamp.org/news/how-to-use-redux-in-your-react-typescript-app/">https://www.freecodecamp.org/news/how-to-use-redux-in-your-react-typescript-app/</a></p>
+<p><a href="https://dev.to/jacopobonta/react-typescript-webpack-3c6l">https://dev.to/jacopobonta/react-typescript-webpack-3c6l</a></p>
+</div>
+<div id="i-have-plenty-of-examples" class="slide section level1">
+<h1>I Have Plenty of Examples!</h1>
+<p><a href="https://github.com/glowkeeper">https://github.com/glowkeeper</a></p>
+<p>…and there is some more example code in the next section…</p>
+</div>
+<div id="a-changing-landscape" class="slide section level1">
+<h1>A Changing Landscape</h1>
+<p><img src="images/changingLandscape.jpeg" /></p>
+<p><em>Image Source: <a href="https://www.theguardian.com/us-news/2019/aug/06/california-collapsing-beach-deaths-highlight-climate-fueled-erosion-crisis">https://www.theguardian.com/us-news/2019/aug/06/california-collapsing-beach-deaths-highlight-climate-fueled-erosion-crisis</a></em></p>
+</div>
+<div id="wabi-sabi-侘寂" class="slide section level1">
+<h1>Wabi-sabi 侘寂</h1>
+<p>You must accept transience and imperfection, as none of the concepts introduced in this lecture are set in stone - javascript frameworks are a fast changing landscape…</p>
+<p>e.g. last year’s lecture: <code>All React components subclass React.Component</code> - just a year on, that is no longer true! Nowadays, it is more common to see a <em>functional</em> approach.</p>
+</div>
+<div id="hello-world" class="slide section level1">
+<h1>Hello (World)</h1>
+<pre><code>interface HelloProps {
+  entity: string
+}
+
+export const Hello = (props: HelloProps) =&gt; &lt;h1&gt;Hello {props.entity}&lt;/h1&gt;</code></pre>
+<p>…and you’d use it like this:</p>
+<pre><code>const App = () =&gt; {
+
+  return (
+    &lt;Hello entity=&quot;World&quot;/&gt;
+  )
+}</code></pre>
+</div>
+<div id="hooks" class="slide section level1">
+<h1>Hooks</h1>
+<p>React’s functional approach is powered by <em>hooks</em>, which are special functions that let developers “hook into” the React lifecycle without requiring class architecture.</p>
+</div>
+<div id="common-hooks" class="slide section level1">
+<h1>Common Hooks</h1>
+<ol class="incremental" style="list-style-type: decimal">
+<li><a href="https://reactjs.org/docs/hooks-state.html">useState</a> - adds state to function components</li>
+<li><a href="https://reactjs.org/docs/hooks-effect.html">useEffect</a> - performs side effects in function components</li>
+<li><a href="https://reactjs.org/docs/hooks-reference.html#useref">useRef</a> - returns a mutable ref object whose <code>.current</code> property is initialised to the passed argument</li>
+<li><a href="https://reactrouter.com/web/api/Hooks/usehistory">useHistory</a> - used for navigation as it gives access to the <a href="https://reactrouter.com/">react router</a> history instance</li>
+<li><a href="https://material-ui.com/styles/api/#usetheme-theme">useTheme</a> - returns the <a href="https://material-ui.com/">Material UI</a> theme object</li>
+</ol>
+</div>
+<div id="hook-example" class="slide section level1">
+<h1>Hook Example</h1>
+<pre><code>const display = (props: Props) =&gt; {
+
+  let isFirstRun = useRef(true)
+  const theme = useTheme()
+  const classes = themeStyles()
+  const history = useHistory()
+
+  useEffect(() =&gt; {
+
+    if ( !props.user.accessToken ) {
+
+      props.setActivePage(PageTypes.SIGNIN)
+      history.push(`${Local.home}`)
+
+    } else if ( ( props.user.info.role !== Dbase.adminRole.id ) &amp;&amp;
+                ( props.user.info.role !== Dbase.sqlRole.id ) ) {
+
+      props.setActivePage(PageTypes.SIGNIN)
+      history.push(`${Local.signIn}`)
+
+    } else if ( isFirstRun.current ) {
+
+      props.setActivePage(PageTypes.AUTHENTICATED)
+      isFirstRun.current = false
+    }
+
+  }, [props.user])
+
+  return (
+
+    &lt;Grid className={classes.loggedInContent} item container xs={12}&gt;
+
+      &lt;Grid item container xs={12}&gt;
+
+        &lt;Grid item container justify=&quot;flex-start&quot; xs={12}&gt;
+
+          &lt;Typography variant=&quot;h2&quot;&gt;
+            {WalletConfig.heading}
+          &lt;/Typography&gt;
+
+        &lt;/Grid&gt;
+
+        &lt;Grid item container justify=&quot;flex-start&quot; xs={12}&gt;
+          &lt;svg
+             xmlns=&quot;http://www.w3.org/2000/svg&quot;
+             width=&quot;2000&quot;
+             height=&quot;4&quot;
+          &gt;
+            &lt;line x2=&quot;2000&quot; stroke=&quot;#317AFF&quot; strokeWidth={4} /&gt;
+          &lt;/svg&gt;
+        &lt;/Grid&gt;
+
+        &lt;ListWallets /&gt;
+
+      &lt;/Grid&gt;
+
+    &lt;/Grid&gt;
+  )
+}</code></pre>
+</div>
+<div id="dexxed-a-minima-app" class="slide section level1">
+<h1>Dexxed – A Minima App</h1>
+<p><img src="images/dexxed.png" /></p>
+</div>
+<div id="the-functional-solution" class="slide section level1">
+<h1>The Functional Solution</h1>
+<p>Sort is a (super-cool) high-order function that allows developers to define its behaviour via an (anonymous) function, which is given as an argument.</p>
+<pre><code>const sortOrderBook = (ordersData: OrderProps): Order[]  =&gt; {
+
+  return ordersData.data.sort((a: Order, b: Order) =&gt; {
+    (a.isBuy === b.isBuy) ? (a.isBuy ? b.price.cmp(a.price) : a.price.cmp(b.price)) : 1 )
+  }
+}</code></pre>
+</div>
+<div id="useful-resources" class="slide section level1">
+<h1>Useful Resources</h1>
+<p><img src="images/resources.jpeg" /></p>
+<p><em>Image Source: <a href="https://lochside.aberdeen.sch.uk/home-learning-resources/">https://lochside.aberdeen.sch.uk/home-learning-resources/</a></em></p>
+</div>
+<div id="react-sites" class="slide section level1">
+<h1>React Sites</h1>
+<p><a href="https://reactjs.org/">https://reactjs.org/</a></p>
+<p><a href="https://www.w3schools.com/react/">https://www.w3schools.com/react/</a></p>
+<p><a href="https://www.typescriptlang.org/">https://www.typescriptlang.org/</a></p>
+<p><a href="https://redux.js.org/">https://redux.js.org/</a></p>
+<p><a href="https://webpack.js.org/">https://webpack.js.org/</a></p>
+<p><a href="https://nodejs.org/en/">https://nodejs.org/en/</a></p>
+<p><a href="https://www.npmjs.com/">https://www.npmjs.com/</a></p>
+<p><a href="https://material-ui.com/">https://material-ui.com/</a></p>
+</div>
+<div id="thank-you" class="slide section level1">
+<h1>Thank-you</h1>
+<p><a href="https://github.com/glowkeeper/reactLecture/">https://github.com/glowkeeper/reactLecture/</a></p>
+<p>s.huckle@sussex.ac.uk</p>
+<p>steve.huckle@minima.global</p>
+<p><a href="https://minima.global/">https://minima.global/</a></p>
+<p><a href="https://minima.global/get-involved">https://minima.global/get-involved</a></p>
+</div>
+</body>
+</html>
