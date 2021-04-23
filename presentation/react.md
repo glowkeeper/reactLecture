@@ -56,8 +56,8 @@ _Image Source: [https://www.freecodecamp.org/news/react-js-for-beginners-props-s
 
 # React + HTML
 
-+ HTML on its own is a declarative markup language used for describing _how_ things look
-+ HTML and JavaScript together provide an interactive client-side experience for users
++ HTML on its own is a declarative markup language used for describing _what_ to display
++ HTML and JavaScript together provide an interactive client-side experience for users. The combination allows developers to have more control over _how_ to display.
 + Common (expected?) to write React using _JSX_ and use [Babel](https://babeljs.io/) to transpile that into native JavaScript that is supported by all browsers
 
 - - -
@@ -82,7 +82,7 @@ _Image Source: [https://octoverse.github.com/](https://octoverse.github.com/)_
 
 ![](images/downloadTrends.png)
 
-_Image Source: [https://www.npmtrends.com/react-vs-vue-vs-@angular/core](https://www.npmtrends.com/react-vs-vue-vs-@angular/core)_
+_Image Source: [React vs Vue-vs Angular](https://www.npmtrends.com/react-vs-vue-vs-@angular/core)_
 
 - - -
 
@@ -397,7 +397,7 @@ _Image Source: [https://lochside.aberdeen.sch.uk/home-learning-resources/](https
 
 # Thank-you
 
-[https://github.com/glowkeeper/reactLecture/](https://github.com/glowkeeper/reactLecture/)
+[https://github.com/glowkeeper/reactLecture/blob/main/presentation/react.md](https://github.com/glowkeeper/reactLecture/blob/main/presentation/react.md)
 
 s.huckle@sussex.ac.uk
 
